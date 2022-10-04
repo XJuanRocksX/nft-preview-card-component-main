@@ -1,0 +1,195 @@
+/*
+  Josh's Custom CSS Reset
+  https://www.joshwcomeau.com/css/custom-css-reset/
+*/
+*, *::before, *::after {
+    box-sizing: border-box;
+  }
+  * {
+    margin: 0;
+  }
+  html, body {
+    height: 100%;
+  }
+  body {
+    line-height: 1.5;
+    -webkit-font-smoothing: antialiased;
+  }
+  img, picture, video, canvas, svg {
+    display: block;
+    max-width: 100%;
+  }
+  input, button, textarea, select {
+    font: inherit;
+  }
+  p, h1, h2, h3, h4, h5, h6 {
+    overflow-wrap: break-word;
+  }
+  #root, #__next {
+    isolation: isolate;
+  }
+
+html {
+    font-size: 18px;
+}
+
+body {
+  font-family: 'Outfit', sans-serif;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
+  padding: 1.389rem;
+  background-color: hsl(217, 54%, 11%);
+}
+
+h1 {
+  color: white;
+  font-size: 1.2rem;
+  margin-bottom: 0.722rem;
+}
+
+p {
+  color: hsl(215, 51%, 70%);
+  font-weight: 300;
+}
+
+a {
+  transition: color .5s ease;
+}
+
+a, a:visited {
+  color: hsl(0, 0%, 100%);
+  text-decoration: none;
+}
+
+hr {
+  height: 0.056rem;
+  border: none;
+  background-color: hsl(217, 7%, 38%);
+}
+
+#card {
+  width: 19.444rem;
+  background-color: hsl(216, 50%, 16%);
+  border-radius: 0.833rem;
+  box-shadow: 0rem 2.222rem 0rem 1.111rem rgba(0,0,0,0.05);
+  padding: 1.333rem;
+  margin-bottom: 1.111rem;
+}
+
+#nftimage {
+  position: relative;
+  margin-bottom: 1.222rem;
+  border-radius: 0.556rem;
+  overflow: hidden;
+}
+
+.price-info {
+  margin-top: 1.111rem;
+  margin-bottom: 1.222rem;
+  overflow: auto;
+}
+
+.price-info img {
+  margin-right: 0.278rem;
+}
+
+.price {
+  float: left;
+}
+
+.price p{
+  font-size: 0.87rem;
+  font-weight: 600;
+}
+
+a:hover, .price p {
+  color: hsl(178, 100%, 50%);
+}
+
+.timer {
+  float: right;
+}
+
+.timer p{
+  font-size: 0.9rem;
+}
+
+
+.userinfo {
+  margin-top: 0.833rem;
+  margin-bottom: 0.611rem;
+}
+
+.userinfo img {
+  width: 1.722rem;
+  margin-right: 1rem;
+  border-radius: 50%;
+  outline: 0.056rem solid white;
+}
+
+.userinfo p {
+    font-size: 0.9rem;
+}
+
+.price, .timer, .userinfo {
+  display: flex;
+  align-items: center;
+}
+
+.price p, .price img, .timer p, .timer img, .userinfo p {
+  display: inline-block;
+}
+
+.nftoverlay {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 100%;
+  width: 100%;
+  opacity: 0;
+  background-color: hsl(178, 100%, 50%);
+}
+
+.middle {
+  opacity: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+.nftoverlay, .middle {
+  transition: opacity .5s ease;
+}
+
+#nftimage:hover .middle {
+  opacity: 1;
+}
+
+#nftimage:hover .nftoverlay {
+  opacity: 0.5;
+  cursor: pointer;
+}
+
+.nftoverlay img {
+  align-items: center;
+  width: 3.056rem;
+}
+
+footer {
+  color: white;
+}
+
+footer a{
+  color: black;
+}
+
+.attribution { font-size: 0.611rem; text-align: center; }
+.attribution a { color: hsl(228, 45%, 44%); }
